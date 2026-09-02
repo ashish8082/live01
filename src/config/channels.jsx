@@ -588,8 +588,8 @@ const channels = [
   },
     {
     id: 54,
-    name: "Star Bharat",
-    category: "serial",
+    name: "Eros",
+    category: "movies",
     country: "India",
     logo:eros,
     stream: "https://eros-blywdcnm.cdn.runn.tv/eros/stream/blywcm/manifest/1.m3u8",

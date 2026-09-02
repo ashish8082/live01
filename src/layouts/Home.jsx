@@ -12,33 +12,15 @@ import About from "../pages/About";
 import Terms from "../pages/Terms";
 import PrivacyPolicy from "../pages/Policy";
 import NotFound from "./NotFound";
-import LoginModal from "./login";
 const Home =()=>{
-    const [showLogin, setShowLogin] = useState(false);
      const location = useLocation();
 
-      useEffect(() => {
-                        if (location.pathname === "/") {
-                        const token = localStorage.getItem("token");
-
-                        if (!token) {
-                            setShowLogin(true);
-                        }
-                        } else {
-                        setShowLogin(false);
-                        }
-                    },
-                     [location.pathname]);
-
+     
 
     return(
             <div className="min-h-screen bg-slate-950 pt-20">
                 <Header/>
-                 {
-                    showLogin && (
-                        <LoginModal onClose={() => setShowLogin(false)} />
-                    )}
-
+                 
                 <Routes>
                     <Route path="/" element={<Main/>}/>
                     <Route path="/movies" element={<Movies/>}/>
